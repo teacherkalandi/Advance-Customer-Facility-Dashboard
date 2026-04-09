@@ -209,29 +209,29 @@ export default function App() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 w-full max-w-6xl flex flex-col gap-8">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 px-2">
+      <div className="relative z-10 w-full max-w-6xl flex flex-col gap-4 sm:gap-8">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 px-2">
           <div>
-            <div className="flex items-center gap-2 text-post-red font-bold uppercase tracking-widest text-sm mb-2">
-              <ShieldCheck className="w-5 h-5" />
+            <div className="flex items-center gap-2 text-post-red font-bold uppercase tracking-widest text-[10px] sm:text-sm mb-1 sm:mb-2">
+              <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5" />
               Official Training Module
             </div>
-            <h1 className="text-4xl font-black text-post-dark tracking-tighter">
-              ADVANCE DEPOSIT <span className="text-post-red">FACILITY</span>
+            <h1 className="text-2xl sm:text-4xl font-black text-post-dark tracking-tighter leading-none">
+              ADVANCE PAYMENT <span className="text-post-red">FACILITY</span>
             </h1>
           </div>
-          <div className="flex gap-4">
-            <div className="bg-white p-3 rounded-xl shadow-sm border border-gray-100 flex items-center gap-3">
-              <CreditCard className="w-5 h-5 text-post-red" />
-              <div className="text-xs">
-                <p className="text-post-gray font-bold uppercase">Min Deposit</p>
-                <p className="font-bold text-post-dark">₹ 1,000 / ₹ 10,000</p>
+          <div className="flex gap-2 sm:gap-4">
+            <div className="flex-1 bg-white p-2 sm:p-3 rounded-xl shadow-sm border border-gray-100 flex items-center gap-2 sm:gap-3">
+              <CreditCard className="w-4 h-4 sm:w-5 sm:h-5 text-post-red shrink-0" />
+              <div className="text-[10px] sm:text-xs">
+                <p className="text-post-gray font-bold uppercase leading-none mb-1">Min Deposit</p>
+                <p className="font-bold text-post-dark whitespace-nowrap">₹ 1k / ₹ 10k</p>
               </div>
             </div>
-            <div className="bg-white p-3 rounded-xl shadow-sm border border-gray-100 flex items-center gap-3">
-              <BarChart3 className="w-5 h-5 text-post-red" />
-              <div className="text-xs">
-                <p className="text-post-gray font-bold uppercase">Max Discount</p>
+            <div className="flex-1 bg-white p-2 sm:p-3 rounded-xl shadow-sm border border-gray-100 flex items-center gap-2 sm:gap-3">
+              <BarChart3 className="w-4 h-4 sm:w-5 sm:h-5 text-post-red shrink-0" />
+              <div className="text-[10px] sm:text-xs">
+                <p className="text-post-gray font-bold uppercase leading-none mb-1">Max Discount</p>
                 <p className="font-bold text-post-dark">Up to 32%</p>
               </div>
             </div>
@@ -245,18 +245,18 @@ export default function App() {
           onPrev={prevSlide} 
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-2">
-          <div className="flex items-center gap-3 text-post-gray">
-            <Clock className="w-5 h-5" />
-            <p className="text-sm font-medium">Registration: 2 Working Days</p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-4 px-2">
+          <div className="flex items-center gap-2 text-post-gray">
+            <Clock className="w-4 h-4" />
+            <p className="text-[10px] sm:text-sm font-medium">Registration: 2 Working Days</p>
           </div>
-          <div className="flex items-center gap-3 text-post-gray justify-center">
-            <Scale className="w-5 h-5" />
-            <p className="text-sm font-medium">Post Office Regulations 2024</p>
+          <div className="flex items-center gap-2 text-post-gray sm:justify-center">
+            <Scale className="w-4 h-4" />
+            <p className="text-[10px] sm:text-sm font-medium">Post Office Regulations 2024</p>
           </div>
-          <div className="flex items-center gap-3 text-post-gray justify-end">
-            <Mail className="w-5 h-5" />
-            <p className="text-sm font-medium">Corporate & Contractual Services</p>
+          <div className="flex items-center gap-2 text-post-gray sm:justify-end">
+            <Mail className="w-4 h-4" />
+            <p className="text-[10px] sm:text-sm font-medium">Corporate Services</p>
           </div>
         </div>
       </div>

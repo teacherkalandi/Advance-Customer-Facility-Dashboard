@@ -24,14 +24,14 @@ export default function SlideViewer({ slides, currentSlideIndex, onNext, onPrev 
   };
 
   return (
-    <div className="relative w-full max-w-5xl mx-auto h-[700px] sm:h-[600px] bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col border border-gray-100">
+    <div className="relative w-full max-w-5xl mx-auto h-[600px] sm:h-[600px] bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col border border-gray-100">
       {/* Header */}
-      <div className="bg-post-red p-4 sm:p-6 flex justify-between items-center text-white shrink-0">
+      <div className="bg-post-red p-3 sm:p-6 flex justify-between items-center text-white shrink-0">
         <div className="flex items-center gap-2 sm:gap-3">
           <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-post-gold" />
-          <h2 className="text-sm sm:text-xl font-bold tracking-tight uppercase truncate max-w-[200px] sm:max-w-none">India Post | Advance Payment</h2>
+          <h2 className="text-xs sm:text-xl font-bold tracking-tight uppercase truncate max-w-[180px] sm:max-w-none">India Post | Advance Payment</h2>
         </div>
-        <div className="text-xs sm:text-sm font-medium opacity-80 whitespace-nowrap">
+        <div className="text-[10px] sm:text-sm font-medium opacity-80 whitespace-nowrap">
           {currentSlideIndex + 1} / {slides.length}
         </div>
       </div>
@@ -47,7 +47,7 @@ export default function SlideViewer({ slides, currentSlideIndex, onNext, onPrev 
       </div>
 
       {/* Content Area */}
-      <div className="flex-1 p-6 sm:p-12 overflow-y-auto relative bg-white">
+      <div className="flex-1 p-4 sm:p-12 overflow-y-auto relative bg-white">
         <AnimatePresence mode="wait">
           <motion.div
             key={slide.id}
@@ -57,13 +57,13 @@ export default function SlideViewer({ slides, currentSlideIndex, onNext, onPrev 
             transition={{ duration: 0.4, ease: "easeOut" }}
             className="h-full flex flex-col"
           >
-            <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+            <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-8">
               <div className="p-2 sm:p-3 bg-red-50 rounded-xl shrink-0">
                 {getIcon(slide.type)}
               </div>
               <div>
-                <h1 className="text-xl sm:text-3xl font-bold text-post-dark leading-tight">{slide.title}</h1>
-                {slide.subtitle && <p className="text-xs sm:text-post-gray font-medium mt-1">{slide.subtitle}</p>}
+                <h1 className="text-lg sm:text-3xl font-bold text-post-dark leading-tight">{slide.title}</h1>
+                {slide.subtitle && <p className="text-[10px] sm:text-post-gray font-medium mt-0.5 sm:mt-1">{slide.subtitle}</p>}
               </div>
             </div>
 
